@@ -1,64 +1,71 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="blackjack.css">
-		<meta name="viewport" content="width=device-width"/>
-		
-	</head>
-	<body>
-		
-		<br>
-		<h1>Blackjack</h1>
-		<h3 id="bankRoll">Bank Roll: $5000</h3>
-		<h3 id="message-el"></h3><br>
-		<div id="buttons">
-			<button type="button" onClick="placeBet()" id="betBtn">Place a bet</button>
-			<button type="button" onClick="startGame()" id="Start"><span id="btnText">Start Game</span></button>
-			<button type="button" onClick="playAnotherHand()" id="play"><span id="btnText">Play Another Hand</span></button>
-			<button type="button" onClick="preCashout()" id="cash">Cash Out</button><br><br>
-		</div>
-		<br><br>
-		<div id="bet" style="display: none;">
-		
-		
+
+<head>
+	<link rel="stylesheet" href="blackjack.css">
+	<meta name="viewport" content="width=device-width" />
+
+</head>
+
+<body>
+
+	<br>
+	<h1>Blackjack</h1>
+	<h3 id="bankRoll">Bank Roll: $5000</h3>
+	<h3 id="message-el"></h3><br>
+	<div id="buttons">
+		<button type="button" onClick="placeBet()" id="betBtn">Place a bet</button>
+		<button type="button" onClick="startGame()" id="Start"><span id="btnText">Start Game</span></button>
+		<button type="button" onClick="playAnotherHand()" id="play"><span id="btnText">Play Another Hand</span></button>
+		<button type="button" onClick="preCashout()" id="cash">Cash Out</button><br><br>
+	</div>
+	<br><br>
+	<div id="bet" style="display: none;">
+
+
 		Enter bet amount: <input type="number" id="betValue"></input><button id="btn" onClick="submit()">Submit</button>
+	</div>
+
+	<div id="hitButtons" style="display: none;">
+
+		<h3>Hit Me? </h3>
+
+		<button type="button" name="Yes" id="Y" onClick="hit()">Yes</button>
+		<button type="button" id="N" name="No" onClick="doNotHit()">No</button>
+
+	</div>
+	<br><br>
+	<div id="zones">
+		<div id="playerZone">
+			<h3 id="yourCards">Your Cards are:</h3>
+			<br>
+			<div id="cards" style="display:none;">
+
+				<div id="pImage"></div>
+
+				<br>
+
+				<li>
+					<h3 id="sum">Sum:</h3>
+				</li>
+			</div>
 		</div>
-		
-		<div id="hitButtons" style="display: none;">
 
-			<h3>Hit Me? </h3>
+		<div id="dealerZone">
+			<h3 id="dealersCards">Dealer's Cards are:</h3>
+			<br>
+			<div id="Dcards" style="display:none;">
+				<div id="dImage"></div>
+				<br>
 
-			<button type="button" name="Yes" id="Y" onClick="hit()">Yes</button>
-			<button type="button" id="N" name="No" onClick="doNotHit()">No</button>
-
+				<li>
+					<h3 id="dealerHas">Sum: </h3>
+				</li>
+			</div>
 		</div>
 		<br><br>
-		<div id="zones">
-			<div id="playerZone">
-				<h3 id="yourCards">Your Cards are:</h3>
-				<br>
-				<div id="cards" style="display:none;">
-					
-						<div id="pImage"></div>
-						
-					<br>
 
-					<li><h3 id="sum">Sum:</h3></li>
-				</div>
-			</div>
-
-			<div id="dealerZone">
-				<h3 id="dealersCards">Dealer's Cards are:</h3>
-				<br>
-				<div id="Dcards" style="display:none;">
-					<div id="dImage"></div>	
-					<br>
-
-					<li><h3 id="dealerHas">Sum: </h3></li>
-				</div>
-			</div>
-			<br><br>
-		
-		</div>	
+	</div>
 	<script type="text/javascript" src="blackjack.js"></script>
-	</body>
+</body>
+
 </html>
